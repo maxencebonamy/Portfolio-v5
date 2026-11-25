@@ -1,0 +1,97 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "journey.json",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"type": "string"
+		},
+		"steps": {
+			"minItems": 1,
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"year": {
+						"description": "Omit on the current step: \"Today\" is shown instead.",
+						"type": "string",
+						"minLength": 1
+					},
+					"age": {
+						"type": "integer",
+						"exclusiveMinimum": 0,
+						"maximum": 9007199254740991
+					},
+					"title": {
+						"type": "object",
+						"properties": {
+							"fr": {
+								"type": "string",
+								"minLength": 1
+							},
+							"en": {
+								"type": "string",
+								"minLength": 1
+							}
+						},
+						"required": [
+							"fr",
+							"en"
+						],
+						"additionalProperties": false
+					},
+					"place": {
+						"type": "object",
+						"properties": {
+							"fr": {
+								"type": "string",
+								"minLength": 1
+							},
+							"en": {
+								"type": "string",
+								"minLength": 1
+							}
+						},
+						"required": [
+							"fr",
+							"en"
+						],
+						"additionalProperties": false
+					},
+					"text": {
+						"type": "object",
+						"properties": {
+							"fr": {
+								"type": "string",
+								"minLength": 1
+							},
+							"en": {
+								"type": "string",
+								"minLength": 1
+							}
+						},
+						"required": [
+							"fr",
+							"en"
+						],
+						"additionalProperties": false
+					},
+					"current": {
+						"description": "Highlights the step as the current one.",
+						"type": "boolean"
+					}
+				},
+				"required": [
+					"title",
+					"place",
+					"text"
+				],
+				"additionalProperties": false
+			}
+		}
+	},
+	"required": [
+		"steps"
+	],
+	"additionalProperties": false
+}

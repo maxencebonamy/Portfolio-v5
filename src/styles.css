@@ -1,0 +1,263 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* Palette, switched by `data-theme` on <html> */
+:root {
+	--bg: #ebebeb;
+	--bg-elev: #f5f5f4;
+	--fg: #1a1a1a;
+	--muted: #6b6b6b;
+	--line: rgba(26, 26, 26, 0.12);
+	--coral: #ff6a69;
+	--coral-soft: rgba(255, 106, 105, 0.16);
+	--blue: #00599c;
+	--grain-opacity: 0.05;
+}
+
+[data-theme='dark'] {
+	--bg: #1a1a1a;
+	--bg-elev: #222222;
+	--fg: #ebebeb;
+	--muted: #8f8f8f;
+	--line: rgba(235, 235, 235, 0.1);
+	--grain-opacity: 0.06;
+}
+
+@theme inline {
+	--color-bg: var(--bg);
+	--color-elev: var(--bg-elev);
+	--color-fg: var(--fg);
+	--color-muted: var(--muted);
+	--color-line: var(--line);
+	--color-coral: var(--coral);
+	--color-coral-soft: var(--coral-soft);
+	--color-blue: var(--blue);
+	--font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+	--font-mono: 'JetBrains Mono', ui-monospace, monospace;
+	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+	background: var(--bg);
+	color: var(--fg);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	background: var(--bg);
+	font-family: var(--font-sans);
+	overflow-x: clip;
+	transition: background-color 0.5s, color 0.5s;
+}
+
+/* Tailwind 4 resets button cursor to `default`; restore the pointer on clickables */
+button:not(:disabled),
+[role='button']:not([aria-disabled='true']),
+label[for],
+select,
+summary {
+	cursor: pointer;
+}
+
+::selection {
+	background: var(--coral);
+	color: #1a1a1a;
+}
+
+/* Hidden until translated for non-default locales (see src/lib/boot-script.ts) */
+html[data-pending-lang] body {
+	visibility: hidden;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+	height: auto;
+}
+.lenis.lenis-smooth {
+	scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+	overflow: hidden;
+}
+
+/* Signature typography: hollow letters */
+.text-outline {
+	color: transparent !important;
+	-webkit-text-stroke: 2px var(--outline, var(--fg));
+}
+@media (min-width: 768px) {
+	.text-outline {
+		-webkit-text-stroke-width: 2.5px;
+	}
+}
+
+/* Page-colored halo: keeps large titles readable over images */
+.text-knockout {
+	text-shadow:
+		0 0 0.04em var(--bg),
+		0 0 0.12em var(--bg),
+		0 0 0.3em color-mix(in srgb, var(--bg) 60%, transparent);
+}
+
+/* Film grain overlay */
+.grain {
+	pointer-events: none;
+	position: fixed;
+	inset: -50%;
+	z-index: 60;
+	opacity: var(--grain-opacity);
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+	animation: grain 1.2s steps(6) infinite;
+}
+@keyframes grain {
+	0%, 100% { transform: translate(0, 0); }
+	20% { transform: translate(-3%, 2%); }
+	40% { transform: translate(2%, -3%); }
+	60% { transform: translate(-2%, -1%); }
+	80% { transform: translate(3%, 3%); }
+}
+
+/* Static grain over a photo and its dark background: hides compression artifacts */
+.photo-grain {
+	pointer-events: none;
+	opacity: 0.16;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+	background-size: 180px;
+}
+
+/* Background grid */
+.bg-grid {
+	background-image:
+		linear-gradient(to right, var(--line) 1px, transparent 1px),
+		linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+	background-size: 80px 80px;
+	mask-image: radial-gradient(ellipse at 50% 40%, black 20%, transparent 75%);
+}
+
+/* Spotlight cards: cursor-following border and glow (see lib/spotlight.ts) */
+.spotlight {
+	position: relative;
+	isolation: isolate;
+}
+.spotlight::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	padding: 1px;
+	background: radial-gradient(
+		400px circle at var(--mx, 50%) var(--my, 50%),
+		var(--coral),
+		transparent 40%
+	);
+	-webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	opacity: 0;
+	transition: opacity 0.4s;
+	z-index: -1;
+}
+.spotlight::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	background: radial-gradient(
+		500px circle at var(--mx, 50%) var(--my, 50%),
+		var(--coral-soft),
+		transparent 45%
+	);
+	opacity: 0;
+	transition: opacity 0.4s;
+	z-index: -1;
+	pointer-events: none;
+}
+.spotlight:hover::before,
+.spotlight:hover::after {
+	opacity: 1;
+}
+
+/* Marquee */
+@keyframes marquee {
+	to { transform: translateX(-50%); }
+}
+.animate-marquee {
+	animation: marquee var(--duration, 40s) linear infinite;
+}
+.marquee-pause:hover .animate-marquee {
+	animation-play-state: paused;
+}
+
+/* Cursor bubble: hide the native cursor only where the bubble shows */
+@media (pointer: fine) {
+	[data-cursor],
+	[data-cursor] * {
+		cursor: none;
+	}
+}
+
+/* Page and theme view transitions */
+html.theme-vt::view-transition-old(root),
+html.theme-vt::view-transition-new(root) {
+	animation: none;
+	mix-blend-mode: normal;
+}
+/* Language switch: short blurred cross-fade, layout stays in place */
+html.lang-vt::view-transition-old(root) {
+	animation: 0.3s ease both vt-lang-out;
+}
+html.lang-vt::view-transition-new(root) {
+	animation: 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both vt-lang-in;
+}
+@keyframes vt-lang-out {
+	to { opacity: 0; filter: blur(6px); }
+}
+@keyframes vt-lang-in {
+	from { opacity: 0; filter: blur(6px); }
+}
+::view-transition-old(root) {
+	animation: 0.35s ease both vt-fade-out;
+}
+::view-transition-new(root) {
+	animation: 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both vt-fade-in;
+}
+@keyframes vt-fade-out {
+	to { opacity: 0; transform: translateY(-12px); }
+}
+@keyframes vt-fade-in {
+	from { opacity: 0; transform: translateY(24px); }
+}
+::view-transition-group(*) {
+	animation-duration: 0.6s;
+	animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/*
+ * JavaScript disabled: entrance animations never run, so their prerendered start state
+ * (transparent, shifted, clipped) would hide the content. Decorative layers (aria-hidden) stay as they are.
+ */
+@media (scripting: none) {
+	[style*='opacity:0']:not([aria-hidden], [aria-hidden] *) {
+		opacity: 1 !important;
+	}
+	[style*='transform']:not([aria-hidden], [aria-hidden] *) {
+		transform: none !important;
+	}
+	[style*='clip-path:inset'] {
+		clip-path: none !important;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+	.grain { display: none; }
+}

@@ -1,0 +1,28 @@
+{
+	"$schema": "./schemas/site.schema.json",
+	"url": "https://maxencebonamy.fr",
+	"name": "Maxence Bonamy",
+	"title": {
+		"fr": "Maxence Bonamy | Ingénieur logiciel",
+		"en": "Maxence Bonamy | Software Engineer"
+	},
+	"description": {
+		"fr": "Maxence Bonamy, ingénieur logiciel à Angers. Développement web, API, logiciel et simulation. Ouvert aux missions freelance.",
+		"en": "Maxence Bonamy, software engineer based in Angers, France. Web, APIs, software and simulation. Open to freelance work."
+	},
+	"keywords": [
+		"Maxence Bonamy",
+		"ingénieur logiciel",
+		"software engineer",
+		"développeur web",
+		"freelance",
+		"TypeScript",
+		"React",
+		"Angers"
+	],
+	"ogImage": "/og-image.jpg",
+	"themeColor": {
+		"dark": "#1a1a1a",
+		"light": "#ebebeb"
+	}
+}

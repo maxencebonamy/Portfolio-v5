@@ -1,0 +1,128 @@
+{
+	"$schema": "./schemas/home.schema.json",
+	"hero": {
+		"title": {
+			"fr": [
+				{ "text": "Je suis", "style": "light" },
+				{ "text": "Ingénieur", "style": "outline" },
+				{ "text": "Logiciel", "style": "bold", "dot": true }
+			],
+			"en": [
+				{ "text": "I'm a", "style": "light" },
+				{ "text": "Software", "style": "outline" },
+				{ "text": "Engineer", "style": "bold", "dot": true }
+			]
+		},
+		"intro": {
+			"fr": "Ingénieur logiciel chez [iDAKTO], dans l'identité numérique. J'aime développer un projet de bout en bout, du code bas niveau jusqu'à [l'interface] que les gens utilisent.",
+			"en": "Software engineer at [iDAKTO], in digital identity. I like building a project end to end, from low-level code to [the interface] people use."
+		},
+		"badge": {
+			"fr": "Curieux • Polyvalent • Passionné • ",
+			"en": "Curious • Versatile • Passionate • "
+		},
+		"primaryCta": {
+			"fr": "Voir mes projets",
+			"en": "See my work"
+		},
+		"secondaryCta": {
+			"fr": "Me contacter",
+			"en": "Get in touch"
+		}
+	},
+	"about": {
+		"label": {
+			"fr": "À propos",
+			"en": "About"
+		},
+		"intro": {
+			"fr": "J'ai écrit mes premières lignes de code à *11 ans et je n'ai pas arrêté depuis : jeux vidéo, simulations physiques, plugins Minecraft, sites web, API... Aujourd'hui ingénieur logiciel dans l'identité numérique, je continue de coder sur mon temps libre, souvent pour essayer un langage ou un outil que je ne connais pas *encore.",
+			"en": "I wrote my first lines of code at *11 and haven't stopped since: video games, physics simulations, Minecraft plugins, websites, APIs... Now a software engineer in digital identity, I still code in my free time, often to try a language or tool I don't know *yet."
+		},
+		"stats": [
+			{
+				"value": "yearsCoding",
+				"suffix": { "fr": " ans", "en": " years" },
+				"label": { "fr": "à coder, depuis mes 11 ans", "en": "of coding, since I was 11" }
+			},
+			{
+				"value": "technologies",
+				"suffix": { "fr": "+", "en": "+" },
+				"label": { "fr": "technologies utilisées en projet", "en": "technologies used in real projects" }
+			},
+			{
+				"value": 1,
+				"suffix": { "fr": "re", "en": "st" },
+				"label": { "fr": "place au tournoi de code Asynconf 2023", "en": "place at the Asynconf 2023 coding tournament" }
+			}
+		]
+	},
+	"projects": {
+		"label": {
+			"fr": "Projets",
+			"en": "Work"
+		},
+		"title": {
+			"first": { "fr": "Projets", "en": "Selected" },
+			"second": { "fr": "sélectionnés", "en": "work" }
+		},
+		"allProjects": {
+			"fr": "Tous les projets",
+			"en": "All projects"
+		},
+		"moreProjects": {
+			"fr": "Voir les {count} autres projets",
+			"en": "See {count} more projects"
+		}
+	},
+	"skills": {
+		"label": {
+			"fr": "Compétences",
+			"en": "Skills"
+		},
+		"title": {
+			"first": { "fr": "Ma boîte", "en": "My" },
+			"second": { "fr": "à outils", "en": "toolbox" }
+		}
+	},
+	"journey": {
+		"label": {
+			"fr": "Parcours",
+			"en": "Journey"
+		},
+		"title": {
+			"first": { "fr": "D'un premier", "en": "From a first" },
+			"second": { "fr": "script...", "en": "script..." }
+		},
+		"intro": {
+			"fr": "...à mon métier d'ingénieur logiciel. Les étapes qui ont compté.",
+			"en": "...to my job as a software engineer. The steps that mattered."
+		}
+	},
+	"contact": {
+		"label": {
+			"fr": "Contact",
+			"en": "Contact"
+		},
+		"title": {
+			"first": { "fr": "Un projet", "en": "Got a" },
+			"second": { "fr": "en tête ?", "en": "project?" }
+		},
+		"intro": {
+			"fr": "Pour une mission freelance ou simplement une question, écrivez-moi.",
+			"en": "For a freelance project or just a question, drop me a line."
+		},
+		"copy": {
+			"fr": "Copier",
+			"en": "Copy"
+		},
+		"resume": {
+			"fr": "Mon CV",
+			"en": "My resume"
+		},
+		"resumeDetails": {
+			"fr": "PDF · Français",
+			"en": "PDF · English"
+		}
+	}
+}

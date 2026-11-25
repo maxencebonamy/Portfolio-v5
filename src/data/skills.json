@@ -1,0 +1,108 @@
+{
+	"$schema": "./schemas/skills.schema.json",
+	"marquee": [
+		"TypeScript",
+		"React",
+		"Fastify",
+		"OpenAPI",
+		"Go",
+		"C++",
+		"Java",
+		"SQL",
+		"TailwindCSS",
+		"Docker",
+		"CI/CD",
+		"Git",
+		"Figma",
+		"UI/UX"
+	],
+	"favorite": {
+		"name": "TypeScript",
+		"badge": "TS",
+		"color": "#3178c6",
+		"label": {
+			"fr": "Langage de prédilection",
+			"en": "Language of choice"
+		},
+		"description": {
+			"fr": "TypeScript et tout son écosystème : des interfaces React aux API Fastify documentées avec OpenAPI. Avec le typage de bout en bout, je vois tout de suite ce qu'une modification casse ailleurs.",
+			"en": "TypeScript and its whole ecosystem: from React interfaces to Fastify APIs documented with OpenAPI. With end-to-end typing, I see right away what a change breaks elsewhere."
+		},
+		"items": ["Node.js", "Zod", "Vite", "ESLint"]
+	},
+	"languages": {
+		"title": {
+			"fr": "Langages",
+			"en": "Languages"
+		},
+		"items": ["C++", "Go", "Java", "Python", "C", "PHP"],
+		"snippets": [
+			"std::cout << \"Hello, world!\";",
+			"fmt.Println(\"Hello, world!\")",
+			"System.out.println(\"Hello, world!\");",
+			"print(\"Hello, world!\")",
+			"printf(\"Hello, world!\\n\");",
+			"echo \"Hello, world!\";"
+		]
+	},
+	"backend": {
+		"title": {
+			"fr": "Back-end & API",
+			"en": "Back-end & APIs"
+		},
+		"items": ["Fastify", "Spring Boot", "Prisma", "PostgreSQL", "Redis", "OpenAPI"],
+		"requests": [
+			{ "method": "GET", "path": "/projects", "status": 200 },
+			{ "method": "POST", "path": "/auth/token", "status": 201 },
+			{ "method": "GET", "path": "/users/me", "status": 200 },
+			{ "method": "PATCH", "path": "/settings", "status": 204 },
+			{ "method": "GET", "path": "/docs/openapi.json", "status": 200 },
+			{ "method": "DELETE", "path": "/sessions/42", "status": 204 },
+			{ "method": "POST", "path": "/webhooks", "status": 202 },
+			{ "method": "GET", "path": "/health", "status": 200 }
+		]
+	},
+	"frontend": {
+		"title": {
+			"fr": "Front & design",
+			"en": "Front-end & design"
+		},
+		"items": ["React", "Next.js", "Tailwind CSS", "Figma", "UI/UX"],
+		"swatches": ["#ff6a69", "#00599c", "#ffb86b", "#3fc1b0"]
+	},
+	"devops": {
+		"title": {
+			"fr": "DevOps & outils",
+			"en": "DevOps & tooling"
+		},
+		"items": ["Git", "Docker", "CI/CD"],
+		"pipeline": ["lint", "test", "build", "docker", "deploy"]
+	},
+	"workStyle": {
+		"title": {
+			"fr": "Ma façon de travailler",
+			"en": "How I work"
+		},
+		"traits": [
+			{
+				"title": { "fr": "Du C++ au front", "en": "From C++ to front-end" },
+				"text": { "fr": "Aussi à l'aise dans du C++ bas niveau que dans une interface React ou une API.", "en": "As comfortable in low-level C++ as in a React interface or an API." }
+			},
+			{
+				"title": { "fr": "Curieux", "en": "Curious" },
+				"text": { "fr": "Il y a presque toujours un nouveau langage ou un projet perso en cours.", "en": "There's almost always a new language or side project on the go." }
+			},
+			{
+				"title": { "fr": "Lisible d'abord", "en": "Readable first" },
+				"text": { "fr": "Du code typé que quelqu'un d'autre peut reprendre, et des interfaces faciles à prendre en main.", "en": "Typed code someone else can pick up, and interfaces that are easy to use." }
+			}
+		]
+	},
+	"learning": {
+		"label": {
+			"fr": "En train d'apprendre :",
+			"en": "Currently learning:"
+		},
+		"items": ["Motion", "Three.js", "Rust", "Kubernetes", "Effect-TS", "C#", "MonoGame"]
+	}
+}

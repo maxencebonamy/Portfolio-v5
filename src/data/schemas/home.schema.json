@@ -1,0 +1,733 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "home.json",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"type": "string"
+		},
+		"hero": {
+			"type": "object",
+			"properties": {
+				"title": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"minItems": 1,
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"text": {
+										"type": "string",
+										"minLength": 1
+									},
+									"style": {
+										"type": "string",
+										"enum": [
+											"light",
+											"outline",
+											"bold"
+										],
+										"description": "light: thin weight, outline: hollow italic, bold: black weight."
+									},
+									"dot": {
+										"description": "Adds a coral dot after the line.",
+										"type": "boolean"
+									}
+								},
+								"required": [
+									"text",
+									"style"
+								],
+								"additionalProperties": false
+							}
+						},
+						"en": {
+							"minItems": 1,
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"text": {
+										"type": "string",
+										"minLength": 1
+									},
+									"style": {
+										"type": "string",
+										"enum": [
+											"light",
+											"outline",
+											"bold"
+										],
+										"description": "light: thin weight, outline: hollow italic, bold: black weight."
+									},
+									"dot": {
+										"description": "Adds a coral dot after the line.",
+										"type": "boolean"
+									}
+								},
+								"required": [
+									"text",
+									"style"
+								],
+								"additionalProperties": false
+							}
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"intro": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false,
+					"description": "Text under the title. Words between [brackets] are highlighted."
+				},
+				"badge": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false,
+					"description": "Text running around the rotating badge."
+				},
+				"primaryCta": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"secondaryCta": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				}
+			},
+			"required": [
+				"title",
+				"intro",
+				"badge",
+				"primaryCta",
+				"secondaryCta"
+			],
+			"additionalProperties": false
+		},
+		"about": {
+			"type": "object",
+			"properties": {
+				"label": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"intro": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false,
+					"description": "Lights up word by word on scroll. Prefix a word with * to highlight it (e.g. *curious)."
+				},
+				"stats": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"value": {
+								"anyOf": [
+									{
+										"type": "string",
+										"enum": [
+											"yearsCoding",
+											"technologies",
+											"yearsPro"
+										]
+									},
+									{
+										"type": "integer",
+										"minimum": 0,
+										"maximum": 9007199254740991
+									}
+								],
+								"description": "Computed value to display, or a fixed number."
+							},
+							"suffix": {
+								"type": "object",
+								"properties": {
+									"fr": {
+										"type": "string",
+										"minLength": 1
+									},
+									"en": {
+										"type": "string",
+										"minLength": 1
+									}
+								},
+								"required": [
+									"fr",
+									"en"
+								],
+								"additionalProperties": false
+							},
+							"label": {
+								"type": "object",
+								"properties": {
+									"fr": {
+										"type": "string",
+										"minLength": 1
+									},
+									"en": {
+										"type": "string",
+										"minLength": 1
+									}
+								},
+								"required": [
+									"fr",
+									"en"
+								],
+								"additionalProperties": false,
+								"description": "Supports the {company} placeholder."
+							}
+						},
+						"required": [
+							"value",
+							"suffix",
+							"label"
+						],
+						"additionalProperties": false
+					}
+				}
+			},
+			"required": [
+				"label",
+				"intro",
+				"stats"
+			],
+			"additionalProperties": false
+		},
+		"projects": {
+			"type": "object",
+			"properties": {
+				"label": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"title": {
+					"type": "object",
+					"properties": {
+						"first": {
+							"type": "object",
+							"properties": {
+								"fr": {
+									"type": "string",
+									"minLength": 1
+								},
+								"en": {
+									"type": "string",
+									"minLength": 1
+								}
+							},
+							"required": [
+								"fr",
+								"en"
+							],
+							"additionalProperties": false,
+							"description": "First line, plain."
+						},
+						"second": {
+							"type": "object",
+							"properties": {
+								"fr": {
+									"type": "string",
+									"minLength": 1
+								},
+								"en": {
+									"type": "string",
+									"minLength": 1
+								}
+							},
+							"required": [
+								"fr",
+								"en"
+							],
+							"additionalProperties": false,
+							"description": "Second line, hollow italic."
+						}
+					},
+					"required": [
+						"first",
+						"second"
+					],
+					"additionalProperties": false
+				},
+				"allProjects": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"moreProjects": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false,
+					"description": "Link under the featured projects. {count}: number of projects not featured."
+				}
+			},
+			"required": [
+				"label",
+				"title",
+				"allProjects",
+				"moreProjects"
+			],
+			"additionalProperties": false
+		},
+		"skills": {
+			"type": "object",
+			"properties": {
+				"label": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"title": {
+					"type": "object",
+					"properties": {
+						"first": {
+							"type": "object",
+							"properties": {
+								"fr": {
+									"type": "string",
+									"minLength": 1
+								},
+								"en": {
+									"type": "string",
+									"minLength": 1
+								}
+							},
+							"required": [
+								"fr",
+								"en"
+							],
+							"additionalProperties": false,
+							"description": "First line, plain."
+						},
+						"second": {
+							"type": "object",
+							"properties": {
+								"fr": {
+									"type": "string",
+									"minLength": 1
+								},
+								"en": {
+									"type": "string",
+									"minLength": 1
+								}
+							},
+							"required": [
+								"fr",
+								"en"
+							],
+							"additionalProperties": false,
+							"description": "Second line, hollow italic."
+						}
+					},
+					"required": [
+						"first",
+						"second"
+					],
+					"additionalProperties": false
+				}
+			},
+			"required": [
+				"label",
+				"title"
+			],
+			"additionalProperties": false
+		},
+		"journey": {
+			"type": "object",
+			"properties": {
+				"label": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"title": {
+					"type": "object",
+					"properties": {
+						"first": {
+							"type": "object",
+							"properties": {
+								"fr": {
+									"type": "string",
+									"minLength": 1
+								},
+								"en": {
+									"type": "string",
+									"minLength": 1
+								}
+							},
+							"required": [
+								"fr",
+								"en"
+							],
+							"additionalProperties": false,
+							"description": "First line, plain."
+						},
+						"second": {
+							"type": "object",
+							"properties": {
+								"fr": {
+									"type": "string",
+									"minLength": 1
+								},
+								"en": {
+									"type": "string",
+									"minLength": 1
+								}
+							},
+							"required": [
+								"fr",
+								"en"
+							],
+							"additionalProperties": false,
+							"description": "Second line, hollow italic."
+						}
+					},
+					"required": [
+						"first",
+						"second"
+					],
+					"additionalProperties": false
+				},
+				"intro": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				}
+			},
+			"required": [
+				"label",
+				"title",
+				"intro"
+			],
+			"additionalProperties": false
+		},
+		"contact": {
+			"type": "object",
+			"properties": {
+				"label": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"title": {
+					"type": "object",
+					"properties": {
+						"first": {
+							"type": "object",
+							"properties": {
+								"fr": {
+									"type": "string",
+									"minLength": 1
+								},
+								"en": {
+									"type": "string",
+									"minLength": 1
+								}
+							},
+							"required": [
+								"fr",
+								"en"
+							],
+							"additionalProperties": false,
+							"description": "First line, plain."
+						},
+						"second": {
+							"type": "object",
+							"properties": {
+								"fr": {
+									"type": "string",
+									"minLength": 1
+								},
+								"en": {
+									"type": "string",
+									"minLength": 1
+								}
+							},
+							"required": [
+								"fr",
+								"en"
+							],
+							"additionalProperties": false,
+							"description": "Second line, hollow italic."
+						}
+					},
+					"required": [
+						"first",
+						"second"
+					],
+					"additionalProperties": false
+				},
+				"intro": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"copy": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"resume": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"resumeDetails": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				}
+			},
+			"required": [
+				"label",
+				"title",
+				"intro",
+				"copy",
+				"resume",
+				"resumeDetails"
+			],
+			"additionalProperties": false
+		}
+	},
+	"required": [
+		"hero",
+		"about",
+		"projects",
+		"skills",
+		"journey",
+		"contact"
+	],
+	"additionalProperties": false
+}

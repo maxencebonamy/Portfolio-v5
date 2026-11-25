@@ -1,0 +1,20 @@
+node_modules
+dist
+*.tsbuildinfo
+.DS_Store
+.vercel
+.tanstack
+
+# Local design files
+design/
+
+# Source videos are heavy: stored in the "media" GitHub release, only the encoded versions in public/videos are committed
+media/originals/*.mp4
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log

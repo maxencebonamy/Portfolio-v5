@@ -1,0 +1,100 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "site.json",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string",
+			"format": "uri",
+			"description": "Public URL of the site, without trailing slash. Used for canonical URLs, the sitemap and social cards."
+		},
+		"name": {
+			"type": "string",
+			"minLength": 1,
+			"description": "Site name, shown in social cards."
+		},
+		"title": {
+			"type": "object",
+			"properties": {
+				"fr": {
+					"type": "string",
+					"minLength": 1
+				},
+				"en": {
+					"type": "string",
+					"minLength": 1
+				}
+			},
+			"required": [
+				"fr",
+				"en"
+			],
+			"additionalProperties": false,
+			"description": "Default page title."
+		},
+		"description": {
+			"type": "object",
+			"properties": {
+				"fr": {
+					"type": "string",
+					"minLength": 1
+				},
+				"en": {
+					"type": "string",
+					"minLength": 1
+				}
+			},
+			"required": [
+				"fr",
+				"en"
+			],
+			"additionalProperties": false,
+			"description": "Default meta description (around 150 characters)."
+		},
+		"keywords": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			},
+			"description": "Meta keywords."
+		},
+		"ogImage": {
+			"type": "string",
+			"format": "starts_with",
+			"pattern": "^\\/.*",
+			"description": "Social card image, relative to `public/` (1200x630 recommended)."
+		},
+		"themeColor": {
+			"type": "object",
+			"properties": {
+				"dark": {
+					"type": "string",
+					"pattern": "^#[0-9a-f]{6}$"
+				},
+				"light": {
+					"type": "string",
+					"pattern": "^#[0-9a-f]{6}$"
+				}
+			},
+			"required": [
+				"dark",
+				"light"
+			],
+			"additionalProperties": false,
+			"description": "Browser UI color for each theme."
+		}
+	},
+	"required": [
+		"url",
+		"name",
+		"title",
+		"description",
+		"keywords",
+		"ogImage",
+		"themeColor"
+	],
+	"additionalProperties": false
+}

@@ -1,0 +1,1399 @@
+{
+	"$schema": "./schemas/projects.schema.json",
+	"projects": [
+		{
+			"slug": "tick-tactics",
+			"featured": true,
+			"title": {
+				"fr": "Tick Tactics",
+				"en": "Tick Tactics"
+			},
+			"year": "2026",
+			"ongoing": true,
+			"kind": {
+				"fr": "Jeu roguelite",
+				"en": "Roguelite game"
+			},
+			"summary": {
+				"fr": "Un roguelite d'exploration en monde ouvert généré, où le temps est à la fois votre vie, votre monnaie et votre magie.",
+				"en": "A roguelite exploration game in a procedurally generated open world, where time is your life, your currency and your magic."
+			},
+			"description": {
+				"fr": [
+					"Le monde est piégé dans une boucle qui s'achève toujours à Minuit, et vous seul vous en souvenez. Chaque Boucle se joue sur une île générée à neuf, avec déserts, taïgas, marais, toundras et d'autres biomes.",
+					"Combattre, résoudre des énigmes, acheter ou lancer un Tick puise dans le Sablier qui vous garde en vie. Entre deux Boucles, l'Entre-temps garde votre progression permanente.",
+					"Pixel art 16x16 en vue de dessus, sur Windows et macOS, au clavier-souris et à la manette."
+				],
+				"en": [
+					"The world is trapped in a loop that always ends at Midnight, and you are the only one who remembers. Each run drops you on a newly generated island with deserts, taigas, swamps, tundras and more.",
+					"Fighting, solving puzzles, buying or casting a Tick all spend the hourglass that keeps you alive. Between runs, the Meantime keeps your permanent progression.",
+					"Made in top-down 16x16 pixel art for Windows and macOS, with keyboard, mouse and gamepad controls."
+				]
+			},
+			"stack": [
+				"C#",
+				"MonoGame"
+			],
+			"accent": "#eeb551",
+			"frame": "app",
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet personnel",
+						"en": "Personal project"
+					}
+				},
+				{
+					"label": {
+						"fr": "Statut",
+						"en": "Status"
+					},
+					"value": {
+						"fr": "En développement",
+						"en": "In development"
+					}
+				}
+			],
+			"video": {
+				"source": "tick-tactics.mp4",
+				"previewStart": 0,
+				"posterAt": 6.5
+			}
+		},
+		{
+			"slug": "blindify",
+			"featured": true,
+			"title": {
+				"fr": "Blindify",
+				"en": "Blindify"
+			},
+			"year": "2026",
+			"kind": {
+				"fr": "Jeu de blind test",
+				"en": "Music quiz game"
+			},
+			"summary": {
+				"fr": "Une application web de blind test qui transforme vos playlists Spotify en parties de quiz musical.",
+				"en": "A blind test web app that turns your Spotify playlists into music quiz games."
+			},
+			"description": {
+				"fr": [
+					"Blindify permet de se connecter avec Spotify, de choisir une de ses playlists ou d'en chercher une publique, puis de lancer un blind test en quelques clics.",
+					"On choisit le nombre de manches (10, 20 ou 30) et la durée des extraits (10 s ou 20 s). Le backend trouve un extrait audio pour chaque morceau, le découpe et ajoute des fondus, puis diffuse l'état de la partie en temps réel au navigateur.",
+					"Chaque manche joue un extrait anonyme avec une waveform et un compte à rebours, puis révèle la pochette, le titre et l'artiste.",
+					"Le projet est un monorepo TypeScript avec des librairies partagées et une API typée générée depuis OpenAPI."
+				],
+				"en": [
+					"Blindify lets you sign in with Spotify, pick one of your playlists or search public ones, and start a blind test in a few clicks.",
+					"You choose the number of rounds (10, 20 or 30) and the clip length (10 s or 20 s). The backend finds an audio preview for each track, trims it and adds fades, then streams the game state live to the browser.",
+					"Each round plays an anonymous clip with a waveform and a countdown, then reveals the cover, title and artist.",
+					"The project is a TypeScript monorepo with shared libraries and a typed API generated from OpenAPI."
+				]
+			},
+			"stack": [
+				"TypeScript",
+				"React",
+				"TailwindCSS",
+				"Fastify",
+				"PostgreSQL",
+				"Prisma",
+				"Redis"
+			],
+			"accent": "#5cbf5a",
+			"frame": "browser",
+			"links": [
+				{
+					"href": "https://github.com/maxencebonamy/Blindify",
+					"label": {
+						"fr": "Voir sur GitHub",
+						"en": "View on GitHub"
+					}
+				}
+			],
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet personnel",
+						"en": "Personal project"
+					}
+				},
+				{
+					"label": {
+						"fr": "Intégration",
+						"en": "Integration"
+					},
+					"value": {
+						"fr": "Spotify",
+						"en": "Spotify"
+					}
+				}
+			],
+			"video": {
+				"source": "blindify.mp4",
+				"previewStart": 12,
+				"posterAt": 7
+			}
+		},
+		{
+			"slug": "soo-website",
+			"featured": true,
+			"title": {
+				"fr": "Site de la SOO",
+				"en": "SOO website"
+			},
+			"year": "2025",
+			"kind": {
+				"fr": "API et back-office",
+				"en": "API and back office"
+			},
+			"summary": {
+				"fr": "Conception, API et portail d'administration du site de la Société d'Orthopédie de l'Ouest : adhérents, congrès, articles et paiements.",
+				"en": "Design, API and admin portal for the website of the Société d'Orthopédie de l'Ouest: members, congresses, articles and payments."
+			},
+			"description": {
+				"fr": [
+					"Le site de la Société d'Orthopédie de l'Ouest (SOO) regroupe un portail adhérent, un site vitrine, un site pour les congrès et un portail d'administration.",
+					"J'ai fait la maquette globale et la conception de la base de données. J'ai aussi développé l'API et le portail d'administration. D'autres développeurs ont réalisé les trois autres sites et ont contribué à l'API.",
+					"L'API gère les adhérents, les congrès (programme, tarifs, dîners, résumés, historique), les articles, les partenaires, les ressources et les cotisations. Les paiements passent par SogeCommerce. Elle génère aussi des PDF, des documents Word et des exports Excel."
+				],
+				"en": [
+					"The website of the Société d'Orthopédie de l'Ouest (SOO) is made of a member portal, a showcase site, a congress site and an admin portal.",
+					"I did the overall mockups and the database design. I also built the API and the admin portal. Other developers built the three other sites and contributed to the API.",
+					"The API handles members, congresses (programme, pricing, dinners, abstracts, history), articles, partners, resources and membership fees. Payments go through SogeCommerce. It also generates PDFs, Word documents and Excel exports."
+				]
+			},
+			"stack": [
+				"TypeScript",
+				"Adonis.js",
+				"PostgreSQL",
+				"Next.js",
+				"React",
+				"TailwindCSS"
+			],
+			"links": [
+				{
+					"href": "https://soo.com.fr",
+					"label": {
+						"fr": "Voir le site",
+						"en": "Visit the website"
+					}
+				}
+			],
+			"accent": "#0e7490",
+			"frame": "browser",
+			"url": "soo.com.fr",
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet professionnel",
+						"en": "Professional project"
+					}
+				},
+				{
+					"label": {
+						"fr": "Client",
+						"en": "Client"
+					},
+					"value": {
+						"fr": "Société d'Orthopédie de l'Ouest",
+						"en": "Société d'Orthopédie de l'Ouest"
+					}
+				}
+			],
+			"video": {
+				"source": "soo-website.mp4",
+				"previewStart": 0,
+				"posterAt": 2
+			}
+		},
+		{
+			"slug": "among-us-irl",
+			"featured": false,
+			"title": {
+				"fr": "Among Us IRL",
+				"en": "Among Us IRL"
+			},
+			"year": "2024",
+			"kind": {
+				"fr": "Bot Discord",
+				"en": "Discord bot"
+			},
+			"summary": {
+				"fr": "Un bot Discord qui gère une partie d'Among Us jouée en vrai, pour un événement du club LVL+UP à l'ESEO.",
+				"en": "A Discord bot that runs a real-life game of Among Us, built for an event of the LVL+UP club at ESEO."
+			},
+			"description": {
+				"fr": [
+					"Pour un événement du club LVL+UP, j'ai développé le bot d'une partie d'Among Us jouée en vrai. Les joueurs se déplacent dans des salles, et tout ce qui est partagé passe par un serveur Discord géré par le bot.",
+					"Il attribue les rôles (équipier ou imposteur) et répartit les tâches faciles et difficiles, en équilibrant le nombre de fois où chaque tâche est donnée. Les imposteurs tuent avec un délai de récupération. Un joueur peut signaler un corps, ce qui lance une réunion et un vote. Le bot vérifie les conditions de victoire et termine la partie.",
+					"Les données sont dans PostgreSQL avec Prisma, et des tâches planifiées gèrent les salons et les signes vitaux."
+				],
+				"en": [
+					"For an event of the LVL+UP club, I built the bot for a real-life game of Among Us. Players move between rooms, and everything shared between them goes through a Discord server managed by the bot.",
+					"It assigns roles (crewmate or impostor) and shares easy and hard tasks, balancing how often each task is given. Impostors kill with a cooldown. A player can report a body, which starts a meeting and a vote. The bot checks the win conditions and ends the game.",
+					"Data is in PostgreSQL with Prisma, and scheduled jobs handle the channels and the vitals."
+				]
+			},
+			"stack": [
+				"TypeScript",
+				"PostgreSQL",
+				"Prisma"
+			],
+			"accent": "#e5484d",
+			"frame": "app",
+			"links": [
+				{
+					"href": "https://github.com/maxencebonamy/Among-Us-IRL",
+					"label": {
+						"fr": "Voir sur GitHub",
+						"en": "View on GitHub"
+					}
+				}
+			],
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet associatif",
+						"en": "Club project"
+					}
+				}
+			],
+			"video": {
+				"source": "among-us-irl.mp4",
+				"previewStart": 0,
+				"posterAt": 6
+			}
+		},
+		{
+			"slug": "tauri",
+			"featured": false,
+			"title": {
+				"fr": "Tauri",
+				"en": "Tauri"
+			},
+			"year": "2024",
+			"kind": {
+				"fr": "Gestion de projet",
+				"en": "Project management"
+			},
+			"summary": {
+				"fr": "Application web pour composer les équipes et saisir les notes du projet de Génie Logiciel à l'ESEO.",
+				"en": "Web application to build teams and enter grades for the Software Engineering project at ESEO."
+			},
+			"description": {
+				"fr": [
+					"Tauri sert au responsable du projet de Génie Logiciel à l'ESEO. Il importe la liste des étudiants depuis un fichier CSV, fixe le nombre d'équipes et le ratio filles/garçons, puis compose les équipes.",
+					"Encadrants et étudiants signalent les problèmes dans les équipes proposées et valident les changements. Le projet est ensuite découpé en sprints, avec des notes, des bonus et des commentaires par équipe et par étudiant.",
+					"L'authentification passe par un JWT, contrôlé en base ou via un annuaire LDAP, et chaque rôle a ses propres droits de lecture et d'écriture."
+				],
+				"en": [
+					"Tauri is made for the person running the Software Engineering project at ESEO. They import the student list from a CSV file, set the number of teams and the male/female ratio, then build the teams.",
+					"Supervisors and students flag problems in the proposed teams and validate changes. The project is then split into sprints, with grades, bonuses and feedback per team and per student.",
+					"Authentication uses a JWT, checked against the database or an LDAP directory, and each role has its own read and write permissions."
+				]
+			},
+			"stack": [
+				"Java",
+				"Spring Boot",
+				"Hibernate",
+				"Vue.js",
+				"TypeScript",
+				"TailwindCSS",
+				"MySQL"
+			],
+			"accent": "#32aeff",
+			"frame": "browser",
+			"links": [
+				{
+					"href": "https://github.com/maxencebonamy/Tauri",
+					"label": {
+						"fr": "Voir sur GitHub",
+						"en": "View on GitHub"
+					}
+				}
+			],
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet d'école",
+						"en": "School project"
+					}
+				}
+			],
+			"video": {
+				"source": "tauri.mp4",
+				"previewStart": 0.5,
+				"posterAt": 5
+			}
+		},
+		{
+			"slug": "code-with-cards",
+			"featured": false,
+			"title": {
+				"fr": "Code with Cards",
+				"en": "Code with Cards"
+			},
+			"year": "2024",
+			"kind": {
+				"fr": "Jeu pédagogique",
+				"en": "Educational game"
+			},
+			"summary": {
+				"fr": "Un jeu web où l'on programme un déplacement en alignant des cartes : avancer, tourner, boucles et conditions.",
+				"en": "A web game where you program a path by lining up cards: move, turn, loops and conditions."
+			},
+			"description": {
+				"fr": [
+					"Vous disposez d'une grille et d'un paquet de cartes. Chaque carte est une instruction : avancer, tourner à droite ou à gauche, ou une structure comme If, Else, For, While et Until. Vous placez les cartes dans l'ordre, vous lancez l'exécution et le personnage suit le programme.",
+					"Il y a 9 niveaux, chacun avec une difficulté et un jeu de cartes imposé."
+				],
+				"en": [
+					"You get a grid and a deck of cards. Each card is an instruction: move forward, turn right or left, or a structure like If, Else, For, While and Until. You place the cards in order, run the program and the character follows it.",
+					"There are 9 levels, each with its own difficulty and a fixed set of cards."
+				]
+			},
+			"stack": [
+				"Next.js",
+				"TypeScript",
+				"React",
+				"TailwindCSS"
+			],
+			"accent": "#8b5cf6",
+			"frame": "browser",
+			"url": "code-with-cards.maxencebonamy.fr",
+			"links": [
+				{
+					"href": "https://code-with-cards.maxencebonamy.fr",
+					"label": {
+						"fr": "Voir le site",
+						"en": "Visit the website"
+					}
+				},
+				{
+					"href": "https://github.com/maxencebonamy/Code-With-Cards",
+					"label": {
+						"fr": "Voir sur GitHub",
+						"en": "View on GitHub"
+					}
+				}
+			],
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet personnel",
+						"en": "Personal project"
+					}
+				}
+			],
+			"video": {
+				"source": "code-with-cards.mp4",
+				"previewStart": 5,
+				"posterAt": 10
+			}
+		},
+		{
+			"slug": "maestro",
+			"featured": false,
+			"title": {
+				"fr": "Maestro",
+				"en": "Maestro"
+			},
+			"year": "2024",
+			"kind": {
+				"fr": "Gestion de projet",
+				"en": "Project management"
+			},
+			"summary": {
+				"fr": "Une plateforme de gestion de projet avec une application web, un client bureau et quatre machines virtuelles pour l'héberger.",
+				"en": "A project management platform with a web app, a desktop client and four virtual machines to host it."
+			},
+			"description": {
+				"fr": [
+					"Maestro permet de gérer des projets et des tâches, d'y affecter des collaborateurs et de commenter les tâches.",
+					"L'application web (Laravel) s'adresse à tous les utilisateurs et affiche les tâches sur un tableau kanban. Le client bureau (JavaFX) est réservé aux administrateurs et utilise la même base MySQL.",
+					"Pour l'hébergement, Vagrant monte quatre machines virtuelles : serveur web, base de données, reverse proxy et sauvegarde quotidienne.",
+					"Je l'ai réalisé en équipe de cinq pendant mes études à l'ESEO."
+				],
+				"en": [
+					"Maestro lets users manage projects and tasks, assign collaborators and comment on tasks.",
+					"The web app (Laravel) is for all users and shows tasks on a kanban board. The desktop client (JavaFX) is for administrators and uses the same MySQL database.",
+					"For hosting, Vagrant sets up four virtual machines: web server, database, reverse proxy and daily backup.",
+					"I built it in a team of five during my studies at ESEO."
+				]
+			},
+			"stack": [
+				"PHP",
+				"Laravel",
+				"TailwindCSS",
+				"Java",
+				"JavaFX",
+				"MySQL"
+			],
+			"accent": "#7c6af0",
+			"frame": "browser",
+			"links": [
+				{
+					"href": "https://github.com/maxencebonamy/Maestro",
+					"label": {
+						"fr": "Voir sur GitHub",
+						"en": "View on GitHub"
+					}
+				}
+			],
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet d'école",
+						"en": "School project"
+					}
+				}
+			],
+			"video": {
+				"source": "maestro.mp4",
+				"previewStart": 4,
+				"posterAt": 10
+			}
+		},
+		{
+			"slug": "lab-mouse",
+			"featured": false,
+			"title": {
+				"fr": "LabMouse",
+				"en": "LabMouse"
+			},
+			"year": "2024",
+			"kind": {
+				"fr": "Site e-commerce",
+				"en": "Online shop"
+			},
+			"summary": {
+				"fr": "Site vitrine et boutique pour le système de suivi de rongeurs de laboratoire LabMouse.Ai, développé pour NeuroControls GmbH.",
+				"en": "Showcase site and shop for LabMouse.Ai, a monitoring system for laboratory rodents, built for NeuroControls GmbH."
+			},
+			"description": {
+				"fr": [
+					"LabMouse.Ai est une marque de NeuroControls GmbH, qui fabrique un système de suivi du comportement des souris de laboratoire avec des caméras thermiques et de l'IA.",
+					"J'ai développé le site : pages de présentation (accueil, à propos, contact), catalogue de kits et de location, et panier. À la validation du panier, la commande part par e-mail au client via Resend. Le site est en Next.js avec TypeScript et Tailwind CSS. Les contenus et les produits sont rangés dans des fichiers JSON."
+				],
+				"en": [
+					"LabMouse.Ai is a brand of NeuroControls GmbH. It makes a monitoring system for laboratory mice, using thermal cameras and AI.",
+					"I built the site: presentation pages (home, about, contact), a catalogue of starter sets and rentals, and a cart. When the cart is submitted, the order is sent to the customer by email through Resend. The site uses Next.js with TypeScript and Tailwind CSS. Content and products are kept in JSON files."
+				]
+			},
+			"stack": [
+				"Next.js",
+				"React",
+				"TypeScript",
+				"TailwindCSS"
+			],
+			"accent": "#14b8a6",
+			"frame": "browser",
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet professionnel",
+						"en": "Professional project"
+					}
+				}
+			],
+			"video": {
+				"source": "lab-mouse.mp4",
+				"previewStart": 1.5,
+				"posterAt": 0.5
+			}
+		},
+		{
+			"slug": "villes-de-france",
+			"featured": false,
+			"title": {
+				"fr": "Villes de France",
+				"en": "Villes de France"
+			},
+			"year": "2024",
+			"kind": {
+				"fr": "Jeu de géographie",
+				"en": "Geography quiz game"
+			},
+			"summary": {
+				"fr": "Un jeu de carte où l'on place des villes françaises le plus précisément possible pour tester ses connaissances en géographie.",
+				"en": "A map game where you place French cities as precisely as you can to test your geography knowledge."
+			},
+			"description": {
+				"fr": [
+					"Chaque partie propose 10 villes à retrouver sur une carte interactive de la France. On zoome, on se déplace, on pose son marqueur et on valide : le contour réel de la commune s'affiche avec la distance à la réponse.",
+					"Viser à l'intérieur de la commune rapporte 100 points, et le score baisse avec l'éloignement. Sept niveaux de difficulté, des grandes villes aux communes d'environ 20 000 habitants, plus un mode entraînement qui affiche toutes les villes d'un niveau.",
+					"Les données viennent en direct de l'API Géo du gouvernement."
+				],
+				"en": [
+					"Each game gives you 10 cities to find on an interactive map of France. Zoom in, pan, drop your marker and validate: the city's real outline appears along with the distance to your guess.",
+					"Landing inside the city limits scores 100 points, and the score drops the further away you are. Seven difficulty levels, from large cities to towns of about 20,000 people, plus a training mode that shows every city of a level.",
+					"Data comes live from the French government's Geo API."
+				]
+			},
+			"stack": [
+				"Next.js",
+				"TypeScript",
+				"React",
+				"TailwindCSS"
+			],
+			"accent": "#2367f6",
+			"frame": "browser",
+			"url": "villes-de-france.maxencebonamy.fr",
+			"links": [
+				{
+					"href": "https://villes-de-france.maxencebonamy.fr",
+					"label": {
+						"fr": "Voir le site",
+						"en": "Visit the website"
+					}
+				},
+				{
+					"href": "https://github.com/maxencebonamy/Villes-de-France",
+					"label": {
+						"fr": "Voir sur GitHub",
+						"en": "View on GitHub"
+					}
+				}
+			],
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet personnel",
+						"en": "Personal project"
+					}
+				},
+				{
+					"label": {
+						"fr": "Données",
+						"en": "Data"
+					},
+					"value": {
+						"fr": "API Géo",
+						"en": "French Geo API"
+					}
+				},
+				{
+					"label": {
+						"fr": "Carte",
+						"en": "Map"
+					},
+					"value": {
+						"fr": "MapLibre",
+						"en": "MapLibre"
+					}
+				}
+			],
+			"video": {
+				"source": "villes-de-france.mp4",
+				"previewStart": 6,
+				"posterAt": 12
+			}
+		},
+		{
+			"slug": "green-bank",
+			"featured": true,
+			"title": {
+				"fr": "Green Bank",
+				"en": "Green Bank"
+			},
+			"year": "2023",
+			"kind": {
+				"fr": "Simulateur de prêt",
+				"en": "Loan simulator"
+			},
+			"summary": {
+				"fr": "Mon projet classé 1er au tournoi Asynconf 2023, une application web qui calcule le taux d'emprunt d'un véhicule selon son impact écologique.",
+				"en": "My 1st-place entry at the Asynconf 2023 tournament, a web app that calculates a car loan rate from the vehicle's eco-impact."
+			},
+			"description": {
+				"fr": [
+					"Green Bank a remporté la 1re place du tournoi Asynconf 2023, une compétition de code dont le sujet était imposé par un jury.",
+					"Le sujet demandait de calculer le taux d'emprunt d'un véhicule selon son impact environnemental. J'ai conçu une application web qui pose cinq questions rapides : type de véhicule, énergie, distance annuelle, année de fabrication et passagers. Chaque réponse a une note écologique qui entre dans le calcul du taux.",
+					"Le site est aussi entièrement responsive, propose un thème sombre et un thème clair, et ses options viennent de fichiers JSON pour pouvoir les modifier sans toucher au code. L'algorithme principal est couvert par des tests unitaires Jest."
+				],
+				"en": [
+					"Green Bank won 1st place at the Asynconf 2023 tournament, a coding competition with a brief set by the jury.",
+					"The brief was to calculate a car loan rate from the vehicle's environmental impact. I built a web app that asks five quick questions: vehicle type, energy, yearly distance, manufacturing year and passengers. Each answer carries an eco score that feeds the rate calculation.",
+					"The site is also fully responsive, has dark and light themes, and its options come from JSON files so they can be changed without touching the code. The core algorithm is covered by Jest unit tests."
+				]
+			},
+			"stack": [
+				"Next.js",
+				"React",
+				"TypeScript",
+				"TailwindCSS"
+			],
+			"accent": "#16a34a",
+			"frame": "browser",
+			"url": "green-bank.maxencebonamy.fr",
+			"links": [
+				{
+					"href": "https://green-bank.maxencebonamy.fr",
+					"label": {
+						"fr": "Voir le site",
+						"en": "Visit the website"
+					}
+				},
+				{
+					"href": "https://github.com/maxencebonamy/Green-Bank",
+					"label": {
+						"fr": "Voir sur GitHub",
+						"en": "View on GitHub"
+					}
+				}
+			],
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Tournoi de code",
+						"en": "Coding tournament"
+					}
+				},
+				{
+					"label": {
+						"fr": "Événement",
+						"en": "Event"
+					},
+					"value": {
+						"fr": "Asynconf 2023",
+						"en": "Asynconf 2023"
+					}
+				},
+				{
+					"label": {
+						"fr": "Résultat",
+						"en": "Result"
+					},
+					"value": {
+						"fr": "1re place",
+						"en": "1st place"
+					}
+				}
+			],
+			"video": {
+				"source": "green-bank.mp4",
+				"previewStart": 0,
+				"posterAt": 1
+			}
+		},
+		{
+			"slug": "tokiphy",
+			"featured": false,
+			"title": {
+				"fr": "Tokiphy",
+				"en": "Tokiphy"
+			},
+			"year": "2023",
+			"kind": {
+				"fr": "Application web",
+				"en": "Web app"
+			},
+			"summary": {
+				"fr": "Prototype web pour partager ses coordonnées et ses cartes de visite à partir d'une carte Tokiphy.",
+				"en": "Web prototype for sharing contact details and business cards from a Tokiphy card."
+			},
+			"description": {
+				"fr": [
+					"Tokiphy est développé par NeuroControls GmbH. J'ai fait ce prototype pendant mon stage dans cette entreprise, entre septembre et novembre 2023.",
+					"Chaque carte Tokiphy a sa propre adresse. Le propriétaire choisit les comptes à afficher (LinkedIn, GitHub, mail, TikTok, Xing...) et les images de cartes de visite à montrer. Un visiteur ouvre l'adresse et envoie une demande avec son e-mail. Le propriétaire l'accepte ou la refuse. S'il l'accepte, le visiteur reçoit ses informations par e-mail.",
+					"J'ai aussi ajouté le lien à copier, le QR code, la mémoire de la dernière carte visitée et l'envoi des images."
+				],
+				"en": [
+					"Tokiphy is developed by NeuroControls GmbH. I built this prototype during my internship at the company, between September and November 2023.",
+					"Each Tokiphy card has its own address. The owner picks which accounts to display (LinkedIn, GitHub, mail, TikTok, Xing...) and which business card images to show. A visitor opens the address and sends a request with their email. The owner accepts or declines it. If accepted, the visitor receives the owner's details by email.",
+					"I also added a copyable link, a QR code, the memory of the last card visited and image upload."
+				]
+			},
+			"stack": [
+				"Next.js",
+				"React",
+				"TypeScript",
+				"TailwindCSS",
+				"PostgreSQL",
+				"Prisma"
+			],
+			"accent": "#0876c8",
+			"frame": "browser",
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet de stage",
+						"en": "Internship project"
+					}
+				}
+			],
+			"video": {
+				"source": "tokiphy.mp4",
+				"previewStart": 3,
+				"posterAt": 4
+			}
+		},
+		{
+			"slug": "mouse-behavior-viewer",
+			"featured": false,
+			"title": {
+				"fr": "Mouse Behavior Viewer",
+				"en": "Mouse Behavior Viewer"
+			},
+			"year": "2023",
+			"kind": {
+				"fr": "Logiciel de bureau",
+				"en": "Desktop software"
+			},
+			"summary": {
+				"fr": "Un logiciel qui transforme les données d'une caméra NeuroControls en diagrammes pour étudier le comportement de souris.",
+				"en": "Software that turns data from a NeuroControls camera into charts for studying mouse behaviour."
+			},
+			"description": {
+				"fr": [
+					"La caméra NeuroControls produit un fichier CSV sur l'activité des souris. J'ai écrit un logiciel en Python qui lit ce fichier et affiche plusieurs diagrammes : camembert, diagramme de Gantt, activité par heure, distribution cumulée.",
+					"On choisit l'intervalle de temps à observer dans une fenêtre dédiée, et les fenêtres restent au premier plan. L'interface est faite avec customtkinter et les graphiques avec matplotlib."
+				],
+				"en": [
+					"The NeuroControls camera produces a CSV file about mouse activity. I wrote a Python program that reads this file and displays several charts: pie chart, Gantt chart, activity per hour, cumulative distribution.",
+					"The time interval to observe is chosen in a dedicated window, and the windows stay on top. The interface is built with customtkinter and the charts with matplotlib."
+				]
+			},
+			"stack": [
+				"Python",
+				"CustomTkinter",
+				"Matplotlib",
+				"SciPy",
+				"Pillow"
+			],
+			"accent": "#0f9d8a",
+			"frame": "app",
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet de stage",
+						"en": "Internship project"
+					}
+				}
+			],
+			"video": {
+				"source": "mouse-behavior-viewer.mp4",
+				"previewStart": 0,
+				"posterAt": 0.5
+			}
+		},
+		{
+			"slug": "eseo-student-association-website",
+			"featured": false,
+			"title": {
+				"fr": "Site du BDE de l'ESEO",
+				"en": "ESEO student association website"
+			},
+			"year": "2023",
+			"kind": {
+				"fr": "Site vitrine",
+				"en": "Showcase website"
+			},
+			"summary": {
+				"fr": "Site d'une page qui présente le BDE de l'ESEO, ses événements, ses clubs et ses partenaires.",
+				"en": "Single-page website presenting the ESEO student union, its events, its clubs and its partners."
+			},
+			"description": {
+				"fr": [
+					"J'ai développé ce site pour le BDE de l'ESEO, dont j'étais responsable communication.",
+					"C'est une application React d'une seule page : accueil, présentation, vie associative, clubs, bureau, partenaires et pied de page. Le menu fait défiler la page jusqu'à la section choisie et devient un menu déroulant sur mobile.",
+					"Les événements, les clubs, les membres du bureau et les partenaires sont lus depuis des fichiers JSON, donc le contenu se met à jour sans toucher au code des composants. Le site s'adapte aux écrans d'ordinateur, de tablette et de téléphone."
+				],
+				"en": [
+					"I built this site for the ESEO student union, where I was communication manager.",
+					"It is a single-page React application with a home section, a presentation, student life, clubs, the board, partners and a footer. The menu scrolls the page to the chosen section and turns into a dropdown on mobile.",
+					"Events, clubs, board members and partners are read from JSON files, so the content can be updated without touching the components. The layout adapts to computer, tablet and phone screens."
+				]
+			},
+			"stack": [
+				"JavaScript",
+				"React",
+				"SCSS"
+			],
+			"accent": "#d8262a",
+			"frame": "browser",
+			"url": "eseo-student-association-website.maxencebonamy.fr",
+			"links": [
+				{
+					"href": "https://eseo-student-association-website.maxencebonamy.fr",
+					"label": {
+						"fr": "Voir le site",
+						"en": "Visit the website"
+					}
+				},
+				{
+					"href": "https://github.com/maxencebonamy/Eseo-Student-Association-Website",
+					"label": {
+						"fr": "Voir sur GitHub",
+						"en": "View on GitHub"
+					}
+				}
+			],
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet associatif",
+						"en": "Club project"
+					}
+				}
+			],
+			"video": {
+				"source": "eseo-student-association-website.mp4",
+				"previewStart": 0,
+				"posterAt": 0.5
+			}
+		},
+		{
+			"slug": "study-help-website",
+			"featured": false,
+			"title": {
+				"fr": "Site d'aide scolaire",
+				"en": "Study help website"
+			},
+			"year": "2022",
+			"kind": {
+				"fr": "Diagnostic personnalisé",
+				"en": "Personalized assessment"
+			},
+			"summary": {
+				"fr": "Mission pour la Junior-Entreprise de l'ESEO : un diagnostic personnalisé, généré par un algorithme à partir d'un formulaire, pour aider les élèves en difficulté.",
+				"en": "A project for ESEO's Junior-Enterprise: a personalized diagnosis, generated by an algorithm from a questionnaire, to help struggling students."
+			},
+			"description": {
+				"fr": [
+					"Étant intervenant au SEIO, la Junior-Entreprise de mon école, j'ai eu l'opportunité de réaliser plusieurs projets pour des entreprises.",
+					"Pour celui-ci, j'ai ajouté au site un algorithme qui, à la suite d'un formulaire, génère un diagnostic personnalisé : points forts, points à surveiller et conseils par thème (état d'esprit, motivation, concentration, méthode de travail...)."
+				],
+				"en": [
+					"As a consultant at SEIO, my school's Junior-Enterprise, I had the opportunity to deliver several projects for companies.",
+					"For this one, I added an algorithm to the website that, after a questionnaire, generates a personalized diagnosis: strengths, points to watch and advice by theme (mindset, motivation, focus, study methods...)."
+				]
+			},
+			"stack": [
+				"PHP",
+				"WordPress",
+				"MySQL"
+			],
+			"accent": "#3fc1b0",
+			"frame": "browser",
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet professionnel",
+						"en": "Professional project"
+					}
+				},
+				{
+					"label": {
+						"fr": "Client",
+						"en": "Client"
+					},
+					"value": {
+						"fr": "Aled & Co",
+						"en": "Aled & Co"
+					}
+				}
+			],
+			"video": {
+				"source": "study-help-website.mp4",
+				"previewStart": 0,
+				"posterAt": 1
+			}
+		},
+		{
+			"slug": "eseo-student-association-campaign",
+			"featured": false,
+			"title": {
+				"fr": "Campagne du BDE de l'ESEO",
+				"en": "ESEO student association campaign"
+			},
+			"year": "2022",
+			"kind": {
+				"fr": "Site de campagne",
+				"en": "Campaign site"
+			},
+			"summary": {
+				"fr": "Le site de la liste EseoNova pour les élections de l'association étudiante de l'ESEO.",
+				"en": "The website of the EseoNova list for the ESEO student association elections."
+			},
+			"description": {
+				"fr": [
+					"J'ai fait le site de campagne de la liste EseoNova.",
+					"Il présente le mot du président, le planning, l'équipe par module, les objectifs et les sponsors. Le thème de la liste (étoile, nova, supernova, trou noir) se retrouve dans un fond étoilé animé sur un canvas.",
+					"Le site est en HTML, CSS et JavaScript, sans outil de build, avec une version mobile."
+				],
+				"en": [
+					"I built the campaign website of the EseoNova list.",
+					"It shows the president's message, the schedule, the team by module, the objectives and the sponsors. The list's theme (star, nova, supernova, black hole) appears in an animated starfield drawn on a canvas.",
+					"The site is plain HTML, CSS and JavaScript, with no build step, and has a mobile version."
+				]
+			},
+			"stack": [
+				"HTML",
+				"CSS",
+				"JavaScript"
+			],
+			"accent": "#7c5cff",
+			"frame": "browser",
+			"url": "eseo-student-association-campaign.maxencebonamy.fr",
+			"links": [
+				{
+					"href": "https://eseo-student-association-campaign.maxencebonamy.fr",
+					"label": {
+						"fr": "Voir le site",
+						"en": "Visit the website"
+					}
+				},
+				{
+					"href": "https://github.com/maxencebonamy/Eseo-Student-Association-Campaign",
+					"label": {
+						"fr": "Voir sur GitHub",
+						"en": "View on GitHub"
+					}
+				}
+			],
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet associatif",
+						"en": "Club project"
+					}
+				}
+			],
+			"video": {
+				"source": "eseo-student-association-campaign.mp4",
+				"previewStart": 0,
+				"posterAt": 0.5
+			}
+		},
+		{
+			"slug": "fractal-explorer",
+			"featured": false,
+			"title": {
+				"fr": "Explorateur de fractales",
+				"en": "Fractal Explorer"
+			},
+			"year": "2022",
+			"kind": {
+				"fr": "Simulation mathématique",
+				"en": "Mathematical simulation"
+			},
+			"summary": {
+				"fr": "Un explorateur de fractales en C++ où l'on zoome sur l'ensemble de Mandelbrot et la fractale Burning Ship.",
+				"en": "A C++ fractal explorer for zooming into the Mandelbrot set and the Burning Ship fractal."
+			},
+			"description": {
+				"fr": [
+					"J'ai écrit ce logiciel pour observer deux fractales de près : l'ensemble de Mandelbrot et le Burning Ship.",
+					"On zoome à la molette et on quitte avec Echap. La fractale se choisit en ligne de commande, avec des options pour le plein écran et la taille des cellules en pixels. Le calcul a d'abord tourné sur le processeur. Je l'ai ensuite déplacé dans un shader GLSL. Une orbite de référence est calculée en précision arbitraire avec GMP, puis le shader calcule l'écart de chaque pixel par rapport à cette orbite."
+				],
+				"en": [
+					"I wrote this software to look at two fractals up close: the Mandelbrot set and the Burning Ship.",
+					"You zoom with the mouse wheel and quit with Esc. The fractal is chosen on the command line, with options for full screen and cell size in pixels. The computation first ran on the CPU. I then moved it into a GLSL shader. A reference orbit is computed in arbitrary precision with GMP, and the shader computes each pixel's offset from that orbit."
+				]
+			},
+			"stack": [
+				"C++",
+				"SFML",
+				"OpenGL"
+			],
+			"accent": "#d9480f",
+			"frame": "app",
+			"links": [
+				{
+					"href": "https://github.com/maxencebonamy/Fractal-Explorer",
+					"label": {
+						"fr": "Voir sur GitHub",
+						"en": "View on GitHub"
+					}
+				}
+			],
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet personnel",
+						"en": "Personal project"
+					}
+				}
+			],
+			"video": {
+				"source": "fractal-explorer.mp4",
+				"previewStart": 1,
+				"posterAt": 0.5,
+				"crf": 23,
+				"maxrate": 20
+			}
+		},
+		{
+			"slug": "genetic-flappy-bird",
+			"featured": false,
+			"title": {
+				"fr": "Flappy Bird génétique",
+				"en": "Genetic Flappy Bird"
+			},
+			"year": "2021",
+			"kind": {
+				"fr": "Algorithme génétique",
+				"en": "Genetic algorithm"
+			},
+			"summary": {
+				"fr": "Un Flappy Bird recodé en Python, où une population de petits réseaux de neurones apprend à jouer par sélection et mutation.",
+				"en": "A Flappy Bird clone in Python, where a population of small neural networks learns to play through selection and mutation."
+			},
+			"description": {
+				"fr": [
+					"J'ai recodé Flappy Bird avec pygame : oiseau, tuyaux, collisions et score.",
+					"Chaque oiseau est piloté par un réseau de neurones à 3 entrées, 5 neurones cachés et 1 sortie. Les entrées sont la vitesse verticale, la distance horizontale au prochain tuyau et la distance verticale au centre de l'ouverture.",
+					"À chaque génération, les 1000 oiseaux jouent en même temps, la moitié la mieux classée est gardée, puis les enfants sont obtenus en moyennant les poids de deux parents et en ajoutant un peu de bruit. L'entraînement tourne sur 100 générations."
+				],
+				"en": [
+					"I rebuilt Flappy Bird with pygame: bird, pipes, collisions and score.",
+					"Each bird is driven by a neural network with 3 inputs, 5 hidden neurons and 1 output. The inputs are the vertical speed, the horizontal distance to the next pipe and the vertical distance to the centre of the gap.",
+					"At each generation, the 1000 birds play at the same time and the best half is kept. Children are made by averaging the weights of two parents and adding a little noise. Training runs for 100 generations."
+				]
+			},
+			"stack": [
+				"Python",
+				"Pygame",
+				"NumPy"
+			],
+			"accent": "#f59e0b",
+			"frame": "app",
+			"links": [
+				{
+					"href": "https://github.com/maxencebonamy/Genetic-Flappy-Bird",
+					"label": {
+						"fr": "Voir sur GitHub",
+						"en": "View on GitHub"
+					}
+				}
+			],
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet personnel",
+						"en": "Personal project"
+					}
+				}
+			],
+			"video": {
+				"source": "genetic-flappy-bird.mp4",
+				"previewStart": 0,
+				"posterAt": 1
+			}
+		},
+		{
+			"slug": "sand-box",
+			"featured": false,
+			"title": {
+				"fr": "Bac à sable",
+				"en": "Sand Box"
+			},
+			"year": "2021",
+			"kind": {
+				"fr": "Simulation physique",
+				"en": "Physics simulation"
+			},
+			"summary": {
+				"fr": "Un bac à sable en C++ où le sable, l'eau, le feu et l'acide réagissent entre eux.",
+				"en": "A C++ sandbox where sand, water, fire and acid react to each other."
+			},
+			"description": {
+				"fr": [
+					"Sand-Box est une simulation de type falling sand. La fenêtre est découpée en cellules de 5 pixels, soit une grille de 320x180, et chaque cellule contient un élément.",
+					"J'ai écrit onze éléments, regroupés par état (solide, poudre, liquide, gaz) qui définit leur déplacement. Chacun ajoute ses propres règles : le feu enflamme le bois, la neige et la glace fondent avec le temps, la vapeur retombe en eau, l'acide dissout ce qu'il touche.",
+					"Vous placez les éléments à la souris et une barre de sélection permet de changer d'élément. Le projet utilise SFML pour l'affichage et Xmake pour la compilation."
+				],
+				"en": [
+					"Sand-Box is a falling-sand simulation. The window is split into 5 pixel cells, which gives a 320x180 grid, and each cell holds one element.",
+					"I wrote eleven elements, grouped by state (solid, powder, liquid, gas), which sets how they move. Each one adds its own rules: fire ignites wood, snow and ice melt over time, steam condenses back into water, acid dissolves what it touches.",
+					"You place elements with the mouse and a selection bar switches between them. The project uses SFML for rendering and Xmake to build."
+				]
+			},
+			"stack": [
+				"C++",
+				"SFML"
+			],
+			"accent": "#d9a441",
+			"frame": "app",
+			"links": [
+				{
+					"href": "https://github.com/maxencebonamy/Sand-Box",
+					"label": {
+						"fr": "Voir sur GitHub",
+						"en": "View on GitHub"
+					}
+				}
+			],
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet personnel",
+						"en": "Personal project"
+					}
+				}
+			],
+			"video": {
+				"source": "sand-box.mp4",
+				"previewStart": 14,
+				"posterAt": 24
+			}
+		},
+		{
+			"slug": "maze-generator-and-solver",
+			"featured": false,
+			"title": {
+				"fr": "Générateur de labyrinthes",
+				"en": "Maze Generator & Solver"
+			},
+			"year": "2021",
+			"kind": {
+				"fr": "Simulation algorithmique",
+				"en": "Algorithm simulation"
+			},
+			"summary": {
+				"fr": "Un programme C++ qui génère un labyrinthe sous vos yeux avec l'un de cinq algorithmes, puis le résout.",
+				"en": "A C++ program that builds a maze in front of you with one of five algorithms, then solves it."
+			},
+			"description": {
+				"fr": [
+					"J'ai écrit ce programme pour comprendre comment on construit un labyrinthe. Il le génère pas à pas avec Prim, Kruskal, Hunt and Kill, le parcours en profondeur ou Aldous-Broder, puis le résout par un parcours en largeur.",
+					"L'affichage utilise SFML. Les options se passent en ligne de commande : algorithme, vitesse, taille des cases, FPS et plein écran. Un clic gauche relance une génération."
+				],
+				"en": [
+					"I wrote this program to understand how a maze is built. It generates one step by step with Prim, Kruskal, Hunt and Kill, depth-first search or Aldous-Broder, then solves it with a breadth-first search.",
+					"The display uses SFML. Options are set on the command line: algorithm, speed, cell size, FPS and fullscreen. A left click starts a new generation."
+				]
+			},
+			"stack": [
+				"C++",
+				"SFML"
+			],
+			"accent": "#3b82f6",
+			"frame": "app",
+			"links": [
+				{
+					"href": "https://github.com/maxencebonamy/Maze-Generator-and-Solver",
+					"label": {
+						"fr": "Voir sur GitHub",
+						"en": "View on GitHub"
+					}
+				}
+			],
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet personnel",
+						"en": "Personal project"
+					}
+				}
+			],
+			"video": {
+				"source": "maze-generator-and-solver.mp4",
+				"previewStart": 0,
+				"posterAt": 1
+			}
+		},
+		{
+			"slug": "pacman",
+			"featured": false,
+			"title": {
+				"fr": "Pacman",
+				"en": "Pacman"
+			},
+			"year": "2020",
+			"kind": {
+				"fr": "Jeu d'arcade",
+				"en": "Arcade game"
+			},
+			"summary": {
+				"fr": "Un jeu d'arcade façon Pac-Man codé de zéro en C++ avec SFML, avec son propre éditeur de cartes.",
+				"en": "A Pac-Man style arcade game built from scratch in C++ with SFML, with its own map editor."
+			},
+			"description": {
+				"fr": [
+					"Un remake du classique de l'arcade écrit en C++ avec SFML. Le joueur avance case par case dans le labyrinthe, mange les pac-gommes et passe par le tunnel pour ressortir de l'autre côté.",
+					"Une super pac-gomme rend les quatre fantômes vulnérables pendant 10 secondes, et un fantôme mangé ne laisse que ses yeux. Le jeu a un compte à rebours au départ, des sprites animés et des écrans de victoire et de défaite, le tout sur une boucle de jeu fixe à 120 FPS.",
+					"Les niveaux sont des fichiers texte créés avec un petit éditeur de cartes que j'ai codé en Python avec Pygame."
+				],
+				"en": [
+					"A remake of the arcade classic written in C++ on top of SFML. The player moves through the maze tile by tile, eats the pac-dots and goes through the side tunnel to reappear on the other side.",
+					"A power pellet makes the four ghosts vulnerable for 10 seconds, and an eaten ghost is left with only its eyes. The game has a countdown at the start, sprite animations and win/lose screens, all running on a fixed 120 FPS game loop.",
+					"Levels are text files made with a small map editor I wrote in Python with Pygame."
+				]
+			},
+			"stack": [
+				"C++",
+				"SFML",
+				"Python",
+				"Pygame"
+			],
+			"accent": "#b98100",
+			"frame": "app",
+			"links": [
+				{
+					"href": "https://github.com/maxencebonamy/Pacman",
+					"label": {
+						"fr": "Voir sur GitHub",
+						"en": "View on GitHub"
+					}
+				}
+			],
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet personnel",
+						"en": "Personal project"
+					}
+				}
+			],
+			"video": {
+				"source": "pacman.mp4",
+				"previewStart": 3,
+				"posterAt": 8
+			}
+		},
+		{
+			"slug": "ecosystem-simulation",
+			"featured": false,
+			"title": {
+				"fr": "Simulation d'écosystème",
+				"en": "Ecosystem Simulation"
+			},
+			"year": "2020",
+			"kind": {
+				"fr": "Simulation scientifique",
+				"en": "Scientific simulation"
+			},
+			"summary": {
+				"fr": "Une simulation de plantes, de proies et de prédateurs sur une grille de cellules, en C++ avec SFML.",
+				"en": "A simulation of plants, prey and predators on a grid of cells, written in C++ with SFML."
+			},
+			"description": {
+				"fr": [
+					"J'ai écrit ce projet pour voir comment trois populations évoluent sur une grille.",
+					"Les plantes se propagent sur les cases vides. Les proies mangent les plantes et meurent si elles ne mangent pas assez. Les prédateurs font la même chose avec les proies.",
+					"Un clic gauche lance ou met en pause la simulation, un clic droit affiche dans la console la part de chaque espèce."
+				],
+				"en": [
+					"I wrote this project to see how three populations evolve on a grid.",
+					"Plants spread onto empty cells. Prey eat plants and die if they do not eat enough. Predators do the same with prey.",
+					"A left click starts or pauses the simulation, and a right click prints the share of each species in the console."
+				]
+			},
+			"stack": [
+				"C++",
+				"SFML"
+			],
+			"accent": "#1fa83a",
+			"frame": "app",
+			"links": [
+				{
+					"href": "https://github.com/maxencebonamy/Ecosystem-Simulation",
+					"label": {
+						"fr": "Voir sur GitHub",
+						"en": "View on GitHub"
+					}
+				}
+			],
+			"highlights": [
+				{
+					"label": {
+						"fr": "Type",
+						"en": "Type"
+					},
+					"value": {
+						"fr": "Projet personnel",
+						"en": "Personal project"
+					}
+				}
+			],
+			"video": {
+				"source": "ecosystem-simulation.mp4",
+				"previewStart": 2,
+				"posterAt": 5,
+				"maxrate": 8
+			}
+		}
+	]
+}

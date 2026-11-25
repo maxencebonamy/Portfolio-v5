@@ -1,0 +1,424 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "skills.json",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"type": "string"
+		},
+		"marquee": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"minLength": 1
+			},
+			"description": "Scrolling band under the hero."
+		},
+		"favorite": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string",
+					"minLength": 1
+				},
+				"badge": {
+					"type": "string",
+					"minLength": 1,
+					"description": "Short logo text, e.g. TS."
+				},
+				"color": {
+					"type": "string",
+					"pattern": "^#[0-9a-f]{6}$"
+				},
+				"label": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"description": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"items": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"minLength": 1
+					}
+				}
+			},
+			"required": [
+				"name",
+				"badge",
+				"color",
+				"label",
+				"description",
+				"items"
+			],
+			"additionalProperties": false,
+			"description": "Large card: language of choice."
+		},
+		"languages": {
+			"type": "object",
+			"properties": {
+				"title": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"items": {
+					"minItems": 1,
+					"type": "array",
+					"items": {
+						"type": "string",
+						"minLength": 1
+					}
+				},
+				"snippets": {
+					"minItems": 1,
+					"type": "array",
+					"items": {
+						"type": "string",
+						"minLength": 1
+					},
+					"description": "\"Hello world\" lines typed in turn on the card."
+				}
+			},
+			"required": [
+				"title",
+				"items",
+				"snippets"
+			],
+			"additionalProperties": false
+		},
+		"backend": {
+			"type": "object",
+			"properties": {
+				"title": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"items": {
+					"minItems": 1,
+					"type": "array",
+					"items": {
+						"type": "string",
+						"minLength": 1
+					}
+				},
+				"requests": {
+					"minItems": 1,
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"method": {
+								"type": "string",
+								"enum": [
+									"GET",
+									"POST",
+									"PUT",
+									"PATCH",
+									"DELETE"
+								]
+							},
+							"path": {
+								"type": "string",
+								"format": "starts_with",
+								"pattern": "^\\/.*"
+							},
+							"status": {
+								"type": "integer",
+								"minimum": 100,
+								"maximum": 599
+							}
+						},
+						"required": [
+							"method",
+							"path",
+							"status"
+						],
+						"additionalProperties": false
+					},
+					"description": "Fake API log scrolling on the card."
+				}
+			},
+			"required": [
+				"title",
+				"items",
+				"requests"
+			],
+			"additionalProperties": false
+		},
+		"frontend": {
+			"type": "object",
+			"properties": {
+				"title": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"items": {
+					"minItems": 1,
+					"type": "array",
+					"items": {
+						"type": "string",
+						"minLength": 1
+					}
+				},
+				"swatches": {
+					"minItems": 1,
+					"type": "array",
+					"items": {
+						"type": "string",
+						"pattern": "^#[0-9a-f]{6}$"
+					},
+					"description": "Colors of the wireframe blocks."
+				}
+			},
+			"required": [
+				"title",
+				"items",
+				"swatches"
+			],
+			"additionalProperties": false
+		},
+		"devops": {
+			"type": "object",
+			"properties": {
+				"title": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"items": {
+					"minItems": 1,
+					"type": "array",
+					"items": {
+						"type": "string",
+						"minLength": 1
+					}
+				},
+				"pipeline": {
+					"minItems": 2,
+					"type": "array",
+					"items": {
+						"type": "string",
+						"minLength": 1
+					},
+					"description": "CI/CD steps run in a loop on the card."
+				}
+			},
+			"required": [
+				"title",
+				"items",
+				"pipeline"
+			],
+			"additionalProperties": false
+		},
+		"workStyle": {
+			"type": "object",
+			"properties": {
+				"title": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"traits": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"title": {
+								"type": "object",
+								"properties": {
+									"fr": {
+										"type": "string",
+										"minLength": 1
+									},
+									"en": {
+										"type": "string",
+										"minLength": 1
+									}
+								},
+								"required": [
+									"fr",
+									"en"
+								],
+								"additionalProperties": false
+							},
+							"text": {
+								"type": "object",
+								"properties": {
+									"fr": {
+										"type": "string",
+										"minLength": 1
+									},
+									"en": {
+										"type": "string",
+										"minLength": 1
+									}
+								},
+								"required": [
+									"fr",
+									"en"
+								],
+								"additionalProperties": false
+							}
+						},
+						"required": [
+							"title",
+							"text"
+						],
+						"additionalProperties": false
+					}
+				}
+			},
+			"required": [
+				"title",
+				"traits"
+			],
+			"additionalProperties": false
+		},
+		"learning": {
+			"type": "object",
+			"properties": {
+				"label": {
+					"type": "object",
+					"properties": {
+						"fr": {
+							"type": "string",
+							"minLength": 1
+						},
+						"en": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"fr",
+						"en"
+					],
+					"additionalProperties": false
+				},
+				"items": {
+					"minItems": 1,
+					"type": "array",
+					"items": {
+						"type": "string",
+						"minLength": 1
+					}
+				}
+			},
+			"required": [
+				"label",
+				"items"
+			],
+			"additionalProperties": false
+		}
+	},
+	"required": [
+		"marquee",
+		"favorite",
+		"languages",
+		"backend",
+		"frontend",
+		"devops",
+		"workStyle",
+		"learning"
+	],
+	"additionalProperties": false
+}

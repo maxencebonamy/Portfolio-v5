@@ -1,0 +1,38 @@
+{
+	"$schema": "./schemas/profile.schema.json",
+	"firstName": "Maxence",
+	"lastName": "Bonamy",
+	"jobTitle": {
+		"fr": "Ingénieur logiciel",
+		"en": "Software Engineer"
+	},
+	"company": "iDAKTO",
+	"location": "Angers, France",
+	"timeZone": "Europe/Paris",
+	"email": "maxencebonamy@gmail.com",
+	"codingSince": 2014,
+	"proSince": 2024,
+	"openToWork": true,
+	"resume": {
+		"fr": "/resume-fr.pdf",
+		"en": "/resume-en.pdf"
+	},
+	"photo": {
+		"src": "/photo.png",
+		"srcWebp": "/photo.webp",
+		"width": 1078,
+		"height": 976
+	},
+	"socials": [
+		{
+			"label": "GitHub",
+			"href": "https://github.com/maxencebonamy",
+			"handle": "@maxencebonamy"
+		},
+		{
+			"label": "LinkedIn",
+			"href": "https://linkedin.com/in/maxencebonamy/",
+			"handle": "in/maxencebonamy"
+		}
+	]
+}

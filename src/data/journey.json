@@ -1,0 +1,127 @@
+{
+	"$schema": "./schemas/journey.schema.json",
+	"steps": [
+		{
+			"year": "2014",
+			"age": 11,
+			"title": {
+				"fr": "Premières lignes de code",
+				"en": "First lines of code"
+			},
+			"place": {
+				"fr": "En autodidacte",
+				"en": "Self-taught"
+			},
+			"text": {
+				"fr": "Des petits jeux en Python pour commencer, puis mes premières pages web en HTML et CSS.",
+				"en": "Small games in Python to begin with, then my first web pages in HTML and CSS."
+			}
+		},
+		{
+			"year": "2017",
+			"age": 14,
+			"title": {
+				"fr": "Mes premiers utilisateurs",
+				"en": "My first users"
+			},
+			"place": {
+				"fr": "Serveurs Minecraft",
+				"en": "Minecraft servers"
+			},
+			"text": {
+				"fr": "Je développe des plugins Java pour des serveurs Minecraft. Pour la première fois, d'autres personnes utilisent ce que je code.",
+				"en": "I build Java plugins for Minecraft servers. For the first time, other people use what I write."
+			}
+		},
+		{
+			"year": "2020",
+			"title": {
+				"fr": "Entrée en école d'ingénieur",
+				"en": "Engineering school"
+			},
+			"place": {
+				"fr": "ESEO · Angers",
+				"en": "ESEO · Angers"
+			},
+			"text": {
+				"fr": "Une école d'électronique et d'informatique, où je me spécialise en développement logiciel et web.",
+				"en": "An electronics and computer science school, where I specialize in software and web development."
+			}
+		},
+		{
+			"year": "2022",
+			"title": {
+				"fr": "Intervenant au SEIO",
+				"en": "Consultant at SEIO"
+			},
+			"place": {
+				"fr": "Junior-Entreprise de l'ESEO",
+				"en": "ESEO's Junior-Enterprise"
+			},
+			"text": {
+				"fr": "Mes premières missions pour de vrais clients, du cahier des charges à la livraison.",
+				"en": "My first projects for real clients, from requirements to delivery."
+			}
+		},
+		{
+			"year": "2023",
+			"title": {
+				"fr": "1re place au tournoi Asynconf",
+				"en": "1st place at the Asynconf tournament"
+			},
+			"place": {
+				"fr": "Compétition de code",
+				"en": "Coding tournament"
+			},
+			"text": {
+				"fr": "Victoire au tournoi de la conférence Asynconf avec Green Bank, sur un sujet imposé par le jury.",
+				"en": "Won the Asynconf conference's tournament with Green Bank, on a brief set by the jury."
+			}
+		},
+		{
+			"year": "2024",
+			"title": {
+				"fr": "Alternance chez iDAKTO",
+				"en": "Work-study at iDAKTO"
+			},
+			"place": {
+				"fr": "Identité numérique",
+				"en": "Digital identity"
+			},
+			"text": {
+				"fr": "J'arrive dans l'identité numérique et l'authentification, en alternance pendant ma dernière année d'école.",
+				"en": "I join the digital identity and authentication industry, as a work-study student during my final year."
+			}
+		},
+		{
+			"year": "2025",
+			"title": {
+				"fr": "Diplôme d'ingénieur",
+				"en": "Engineering degree"
+			},
+			"place": {
+				"fr": "ESEO",
+				"en": "ESEO"
+			},
+			"text": {
+				"fr": "Fin des études, diplôme d'ingénieur en poche.",
+				"en": "Studies done, engineering degree in hand."
+			}
+		},
+		{
+			"current": true,
+			"title": {
+				"fr": "Ingénieur logiciel chez iDAKTO",
+				"en": "Software Engineer at iDAKTO"
+			},
+			"place": {
+				"fr": "CDI · Angers",
+				"en": "Full-time · Angers"
+			},
+			"text": {
+				"fr": "Je développe des solutions d'identité numérique et d'authentification. En parallèle, je reste ouvert à des missions freelance sur mon temps libre.",
+				"en": "I build digital identity and authentication solutions. On the side, I'm open to freelance projects in my free time."
+			}
+		}
+	]
+}

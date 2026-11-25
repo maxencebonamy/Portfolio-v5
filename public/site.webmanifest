@@ -1,0 +1,12 @@
+{
+	"name": "Maxence Bonamy",
+	"short_name": "Maxence Bonamy",
+	"icons": [
+		{ "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+		{ "src": "/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" }
+	],
+	"theme_color": "#1a1a1a",
+	"background_color": "#1a1a1a",
+	"display": "standalone",
+	"start_url": "/"
+}

@@ -1,0 +1,286 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "projects.json",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"type": "string"
+		},
+		"projects": {
+			"minItems": 1,
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"slug": {
+						"type": "string",
+						"pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+						"description": "URL identifier (/projects/<slug>) and video file name."
+					},
+					"featured": {
+						"type": "boolean",
+						"description": "Shown in the stacked cards of the home page."
+					},
+					"title": {
+						"type": "object",
+						"properties": {
+							"fr": {
+								"type": "string",
+								"minLength": 1
+							},
+							"en": {
+								"type": "string",
+								"minLength": 1
+							}
+						},
+						"required": [
+							"fr",
+							"en"
+						],
+						"additionalProperties": false
+					},
+					"year": {
+						"type": "string",
+						"minLength": 1
+					},
+					"ongoing": {
+						"description": "Still in development: shown instead of the year.",
+						"type": "boolean"
+					},
+					"kind": {
+						"type": "object",
+						"properties": {
+							"fr": {
+								"type": "string",
+								"minLength": 1
+							},
+							"en": {
+								"type": "string",
+								"minLength": 1
+							}
+						},
+						"required": [
+							"fr",
+							"en"
+						],
+						"additionalProperties": false,
+						"description": "Short category, e.g. Physics simulation."
+					},
+					"summary": {
+						"type": "object",
+						"properties": {
+							"fr": {
+								"type": "string",
+								"minLength": 1
+							},
+							"en": {
+								"type": "string",
+								"minLength": 1
+							}
+						},
+						"required": [
+							"fr",
+							"en"
+						],
+						"additionalProperties": false,
+						"description": "One or two sentences, shown on cards and as meta description."
+					},
+					"description": {
+						"type": "object",
+						"properties": {
+							"fr": {
+								"minItems": 1,
+								"type": "array",
+								"items": {
+									"type": "string",
+									"minLength": 1
+								}
+							},
+							"en": {
+								"minItems": 1,
+								"type": "array",
+								"items": {
+									"type": "string",
+									"minLength": 1
+								}
+							}
+						},
+						"required": [
+							"fr",
+							"en"
+						],
+						"additionalProperties": false,
+						"description": "Paragraphs of the project page."
+					},
+					"stack": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": "Technologies, also used as filters on the projects page."
+					},
+					"links": {
+						"description": "External links (website, repository), shown as buttons in this order.",
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"href": {
+									"type": "string",
+									"format": "uri"
+								},
+								"label": {
+									"type": "object",
+									"properties": {
+										"fr": {
+											"type": "string",
+											"minLength": 1
+										},
+										"en": {
+											"type": "string",
+											"minLength": 1
+										}
+									},
+									"required": [
+										"fr",
+										"en"
+									],
+									"additionalProperties": false
+								}
+							},
+							"required": [
+								"href",
+								"label"
+							],
+							"additionalProperties": false
+						}
+					},
+					"accent": {
+						"type": "string",
+						"pattern": "^#[0-9a-f]{6}$",
+						"description": "Project color (hex)."
+					},
+					"frame": {
+						"type": "string",
+						"enum": [
+							"browser",
+							"app"
+						],
+						"description": "Window drawn around the video."
+					},
+					"url": {
+						"description": "Address shown in the browser frame, only for a site still online.",
+						"type": "string"
+					},
+					"highlights": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"label": {
+									"type": "object",
+									"properties": {
+										"fr": {
+											"type": "string",
+											"minLength": 1
+										},
+										"en": {
+											"type": "string",
+											"minLength": 1
+										}
+									},
+									"required": [
+										"fr",
+										"en"
+									],
+									"additionalProperties": false
+								},
+								"value": {
+									"type": "object",
+									"properties": {
+										"fr": {
+											"type": "string",
+											"minLength": 1
+										},
+										"en": {
+											"type": "string",
+											"minLength": 1
+										}
+									},
+									"required": [
+										"fr",
+										"en"
+									],
+									"additionalProperties": false
+								}
+							},
+							"required": [
+								"label",
+								"value"
+							],
+							"additionalProperties": false
+						},
+						"description": "Key facts of the project page."
+					},
+					"video": {
+						"type": "object",
+						"properties": {
+							"source": {
+								"type": "string",
+								"minLength": 1,
+								"description": "File name in media/originals."
+							},
+							"previewStart": {
+								"type": "number",
+								"minimum": 0,
+								"description": "Start of the 8 s looping preview, in seconds."
+							},
+							"posterAt": {
+								"type": "number",
+								"minimum": 0,
+								"description": "Timestamp of the poster image, in seconds."
+							},
+							"crf": {
+								"description": "x264 quality of the full video, lower is better (default 27).",
+								"type": "integer",
+								"minimum": 0,
+								"maximum": 51
+							},
+							"maxrate": {
+								"description": "Bitrate cap of the full video, in Mbit/s (default 5).",
+								"type": "number",
+								"exclusiveMinimum": 0
+							}
+						},
+						"required": [
+							"source",
+							"previewStart",
+							"posterAt"
+						],
+						"additionalProperties": false,
+						"description": "Used by `pnpm run media` to encode the web videos."
+					}
+				},
+				"required": [
+					"slug",
+					"featured",
+					"title",
+					"year",
+					"kind",
+					"summary",
+					"description",
+					"stack",
+					"accent",
+					"frame",
+					"highlights",
+					"video"
+				],
+				"additionalProperties": false
+			}
+		}
+	},
+	"required": [
+		"projects"
+	],
+	"additionalProperties": false
+}

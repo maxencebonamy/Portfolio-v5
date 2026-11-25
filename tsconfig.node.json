@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+		"target": "ES2023",
+		"lib": ["ES2023"],
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"strict": true,
+		"noEmit": true,
+		"skipLibCheck": true,
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"types": ["node"],
+		"paths": {
+			"#/*": ["./src/*"]
+		}
+	},
+	"include": ["vite.config.ts", "eslint.config.ts", "scripts", "src/schemas", "src/data", "src/lib/i18n.ts"]
+}
